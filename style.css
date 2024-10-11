@@ -22,6 +22,7 @@ header {
 
 .tab-center {
     display: flex;
+    justify-content: center;
     border-bottom: 2px solid #ebabab;
 }
 
@@ -47,7 +48,7 @@ header {
 }
 
 .tabcontent {
-    display: none;
+    display: flex;
 }
 
 .container {
