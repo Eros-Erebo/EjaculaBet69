@@ -3,8 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(https://i.ibb.co/cQb0QzD/imagem-2024-10-11-120626802.jpg);
-    background-size: auto auto;
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 header {
