@@ -23,7 +23,7 @@
     </div>
 
     <!-- Conteúdo da Roleta Básica -->
-    <div id="basic" class="tabcontent" style="display: block;">
+    <section id="basic" class="tabcontent" style="display: block;">
         <div class="container">
             <h2>Roleta Básica</h2>
             <label for="basicMode">Modo:</label>
@@ -36,10 +36,10 @@
             <button onclick="spin('basic')">Girar</button>
             <p id="resultBasic"></p>
         </div>
-    </div>
+    </section>
 
     <!-- Conteúdo da Roleta Média -->
-    <div id="medium" class="tabcontent">
+    <section id="medium" class="tabcontent">
         <div class="container">
             <h2>Roleta Média</h2>
             <label for="mediumMode">Modo:</label>
@@ -52,10 +52,10 @@
             <button onclick="spin('medium')">Girar</button>
             <p id="resultMedium"></p>
         </div>
-    </div>
+    </section>
 
     <!-- Conteúdo da Roleta Alta -->
-    <div id="high" class="tabcontent">
+    <section id="high" class="tabcontent">
         <div class="container">
             <h2>Roleta Alta</h2>
             <label for="highMode">Modo:</label>
@@ -68,34 +68,28 @@
             <button onclick="spin('high')">Girar</button>
             <p id="resultHigh"></p>
         </div>
-    </div>
+    </section>
 
     <!-- Conteúdo da Roleta Especial -->
-    <div id="especial" class="tabcontent">
+    <section id="especial" class="tabcontent">
         <div class="container">
             <h2>Roleta Especial</h2>
-
             <label for="especialMode">Modo:</label>
             <select id="especialMode">
                 <option value="normal">Normal (chance de perder baseada no valor apostado)</option>
                 <option value="apostador">Modo Apostador (-4% de chance de perder)</option>
             </select>
-
             <br>
-
             <label for="customPrize">Escreva o que você quer ganhar:</label>
             <input type="text" id="customPrize" placeholder="Ex.: Item Raro, Habilidade Especial, 3M Berries">
-
             <br>
-
             <label for="betValue">Digite o valor apostado:</label>
             <input type="text" id="betValue" placeholder="Ex.: 3000000">
-
             <br>
             <button onclick="spin('especial')">Girar</button>
             <p id="resultEspecial"></p>
         </div>
-    </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
