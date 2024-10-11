@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-image: url(https://i.ibb.co/cQb0QzD/imagem-2024-10-11-120626802.jpg);
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center;
 }
 
 header {
@@ -88,4 +88,39 @@ h1 {
 
 h2 {
     color: #741e1e;
+}
+
+/* Media Queries para responsividade */
+.container {
+    padding: 10px; /* Menor padding para telas pequenas */
+}
+
+@media (min-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .tab button {
+        font-size: 16px; /* Ajuste o tamanho da fonte dos botões */
+    }
+}
+
+@media (min-width: 768px) {
+    .tab button {
+        padding: 14px 25px; /* Aumentar o padding dos botões */
+    }
+
+    .container {
+        max-width: 600px; /* Aumentar a largura máxima para telas maiores */
+    }
+}
+
+@media (min-width: 992px) {
+    .tab button {
+        font-size: 18px; /* Aumentar o tamanho da fonte para desktops */
+    }
+
+    .container {
+        max-width: 800px; /* Aumentar a largura máxima para telas maiores */
+    }
 }
