@@ -36,7 +36,7 @@ function spin(roleta) {
     
         // Cálculo da chance de perder com base no valor apostado
         if (betValue <= 100000000) {
-            chancePerder = 10 - ((betValue - 3000000) / 1000000);
+            chancePerder = 90 - ((betValue - 3000000) / 1000000);
         } else {
             chancePerder = 2; // Chance de perder fixa para apostas maiores que 100M
         }
