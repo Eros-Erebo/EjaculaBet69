@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-image: url(https://i.ibb.co/cQb0QzD/imagem-2024-10-11-120626802.jpg);
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
 }
 
