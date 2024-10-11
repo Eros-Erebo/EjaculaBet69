@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://i.ibb.co/cQb0QzD/imagem-2024-10-11-120626802.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #1e507470;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-center {
+    display: flex;
+    border-bottom: 2px solid #ebabab;
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: 0.3s;
+    font-size: 18px;
+    margin: 0 10px;
+    align-items: center;
+}
+
+.tab button:hover {
+    background-color: #7b2727;
+}
+
+.tab button.active {
+    background-color: whitesmoke;
+    color: #741e1e;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+button {
+    background-color: #741e1e;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #964141;
+}
+
+.resultado-container {
+    margin-top: 20px;
+    border-top: 1px solid whitesmoke;
+    padding-top: 10px;
+}
+
+h1 {
+    color: whitesmoke;
+}
+
+h2 {
+    color: #741e1e;
+}
