@@ -1,3 +1,9 @@
+// Contadores de "perdeu tudo" para cada roleta
+let perdeuTudoBasic = 0;
+let perdeuTudoMedium = 0;
+let perdeuTudoHigh = 0;
+let perdeuTudoEspecial = 0;
+
 function spin(roleta) {
     let chancePerder, premioMaximo, xpMaximo, resultElement, mode;
 
@@ -27,37 +33,37 @@ function spin(roleta) {
     } else if (roleta === 'especial') {
         let customPrize = document.getElementById("customPrize").value || "prêmio não especificado";
         let betValue = document.getElementById("betValue").value.replace(/\D/g, ""); // Remove caracteres não numéricos
-    
+
         // Verifica se betValue está vazio e atribui 3.000.000 se estiver
         betValue = betValue === "" ? 3000000 : parseInt(betValue, 10);
-        
+
         resultElement = document.getElementById("resultEspecial");
         mode = document.getElementById("especialMode").value;
-    
+
         // Cálculo da chance de perder com base no valor apostado
         if (betValue <= 100000000) {
             chancePerder = 90 - ((betValue - 3000000) / 1000000);
         } else {
             chancePerder = 2; // Chance de perder fixa para apostas maiores que 100M
         }
-    
+
         if (mode === 'apostador') {
             chancePerder -= 4;
         }
-    
+
         // Garante que a chance de perder não seja negativa
         chancePerder = Math.max(chancePerder, 0);
-    
+
         let perdeu = Math.random() * 100 < chancePerder;
-    
+
         if (perdeu) {
-            resultElement.innerHTML = "Você perdeu tudo!";
+            perdeuTudoEspecial++;
+            resultElement.innerHTML = `Você perdeu tudo! (${perdeuTudoEspecial} vezes)`;
         } else {
             resultElement.innerHTML = `Você ganhou: ${customPrize}`;
         }
         return;
     }
-    
 
     if (mode === 'apostador') {
         chancePerder -= 30;
@@ -68,7 +74,16 @@ function spin(roleta) {
     let perdeu = Math.random() * 100 < chancePerder;
 
     if (perdeu) {
-        resultElement.innerHTML = "Você perdeu tudo!";
+        if (roleta === 'basic') {
+            perdeuTudoBasic++;
+            resultElement.innerHTML = `Você perdeu tudo! (${perdeuTudoBasic} vezes)`;
+        } else if (roleta === 'medium') {
+            perdeuTudoMedium++;
+            resultElement.innerHTML = `Você perdeu tudo! (${perdeuTudoMedium} vezes)`;
+        } else if (roleta === 'high') {
+            perdeuTudoHigh++;
+            resultElement.innerHTML = `Você perdeu tudo! (${perdeuTudoHigh} vezes)`;
+        }
     } else {
         let ganhouBerries = Math.random() < 0.5;
         if (ganhouBerries) {
@@ -79,19 +94,4 @@ function spin(roleta) {
             resultElement.innerHTML = `Você ganhou ${formatarNumero(xp)} XP!`;
         }
     }
-}
-
-// Função para alternar entre as abas
-function openTab(evt, tabName) {
-    let i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
 }
