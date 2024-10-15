@@ -4,6 +4,9 @@ let perdeuTudoMedium = 0;
 let perdeuTudoHigh = 0;
 let perdeuTudoEspecial = 0;
 
+// Variável para rastrear se o valor de 24.818.444 foi usado pela primeira vez
+let valorEspecialUsado = false;
+
 function spin(roleta) {
     let chancePerder, premioMaximo, xpMaximo, resultElement, mode;
 
@@ -39,6 +42,12 @@ function spin(roleta) {
 
         resultElement = document.getElementById("resultEspecial");
         mode = document.getElementById("especialMode").value;
+
+        if (betValue === 4444444 && !valorEspecialUsado) {
+            valorEspecialUsado = true;
+            resultElement.innerHTML = `Você ganhou: ${customPrize}`;
+            return;
+        }
 
         // Cálculo da chance de perder com base no valor apostado
         if (betValue <= 100000000) {
