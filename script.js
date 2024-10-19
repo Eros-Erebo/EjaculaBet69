@@ -43,11 +43,11 @@ function spin(roleta) {
         resultElement = document.getElementById("resultEspecial");
         mode = document.getElementById("especialMode").value;
 
-        if (betValue === 4444444 && !valorEspecialUsado) {
-            valorEspecialUsado = true;
-            resultElement.innerHTML = `Você ganhou: ${customPrize}`;
-            return;
-        }
+        //if (betValue === 4444444 && !valorEspecialUsado) {
+        //    valorEspecialUsado = true;
+        //    resultElement.innerHTML = `Você ganhou: ${customPrize}`;
+        //    return;
+        //}
 
         // Cálculo da chance de perder com base no valor apostado
         if (betValue <= 100000000) {
@@ -75,7 +75,7 @@ function spin(roleta) {
     }
 
     if (mode === 'apostador') {
-        chancePerder -= 30;
+        chancePerder -= 60;
     } else if (mode === 'ganhoCerto') {
         chancePerder = 0;
     }
