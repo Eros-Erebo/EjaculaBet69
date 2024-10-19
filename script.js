@@ -98,10 +98,10 @@ function spin(roleta) {
         if (ganhouBerries) {
             let premio = Math.floor(Math.random() * premioMaximo);
             resultElement.innerHTML = `Você ganhou ${formatarNumero(premio)} Berries!`;
-        } else {
-            let xp = Math.floor(Math.random() * xpMaximo);
-            resultElement.innerHTML = `Você ganhou ${formatarNumero(xp)} XP!`;
-        }
+      //  } else {
+         //   let xp = Math.floor(Math.random() * xpMaximo);
+         //   resultElement.innerHTML = `Você ganhou ${formatarNumero(xp)} XP!`;
+        //}
     }
 }
 
