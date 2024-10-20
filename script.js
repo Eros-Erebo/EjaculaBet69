@@ -97,7 +97,7 @@ function spin(roleta) {
         let ganhouBerries = Math.random() < 0.5;
         
         if (roleta === 'high' && mode === 'apostador') {
-            ganhouBerries = Math.random() < 0.8;
+            ganhouBerries = Math.random() < 0.5;
         }
         
         if (ganhouBerries) {
