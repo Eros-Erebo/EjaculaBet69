@@ -75,7 +75,7 @@ function spin(roleta) {
     }
 
     if (mode === 'apostador') {
-        chancePerder -= 30;
+        chancePerder -= 60;
     } else if (mode === 'ganhoCerto') {
         chancePerder = 0;
     }
@@ -95,6 +95,11 @@ function spin(roleta) {
         }
     } else {
         let ganhouBerries = Math.random() < 0.5;
+        
+        if (roleta === 'high' && mode === 'apostador') {
+            ganhouBerries = Math.random() < 0.8;
+        }
+        
         if (ganhouBerries) {
             let premio = Math.floor(Math.random() * premioMaximo);
             resultElement.innerHTML = `Você ganhou ${formatarNumero(premio)} Berries!`;
