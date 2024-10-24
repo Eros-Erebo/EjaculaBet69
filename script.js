@@ -94,7 +94,7 @@ function spin(roleta) {
             resultElement.innerHTML = `Você perdeu tudo! (${perdeuTudoHigh} vezes)`;
         }
     } else {
-        let ganhouBerries = Math.random() < 0.5;
+        let ganhouBerries = Math.random() < 0.6;
         
         if ((mode === 'ganhoCerto') || mode === 'apostador') {
             ganhouBerries = Math.random() < 0.65;
