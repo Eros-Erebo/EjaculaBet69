@@ -75,7 +75,7 @@ function spin(roleta) {
     }
 
     if (mode === 'apostador') {
-        chancePerder -= 30;
+        chancePerder -= 35;
     } else if (mode === 'ganhoCerto') {
         chancePerder = 0;
     }
@@ -94,10 +94,10 @@ function spin(roleta) {
             resultElement.innerHTML = `Você perdeu tudo! (${perdeuTudoHigh} vezes)`;
         }
     } else {
-        let ganhouBerries = Math.random() < 0.6;
+        let ganhouBerries = Math.random() < 0.65;
         
         if ((mode === 'ganhoCerto') || mode === 'apostador') {
-            ganhouBerries = Math.random() < 0.65;
+            ganhouBerries = Math.random() < 0.7;
         }
         
         if (ganhouBerries) {
