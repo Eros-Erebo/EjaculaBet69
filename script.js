@@ -51,7 +51,7 @@ function spin(roleta) {
 
         // Cálculo da chance de perder com base no valor apostado
         if (betValue <= 100000000) {
-            chancePerder = 90 - ((betValue - 3000000) / 1000000);
+            chancePerder = 90 - ((betValue - 3000000) / (100000000 - 3000000)) * (90 - 2);
         } else {
             chancePerder = 2; // Chance de perder fixa para apostas maiores que 100M
         }
@@ -75,7 +75,7 @@ function spin(roleta) {
     }
 
     if (mode === 'apostador') {
-        chancePerder -= 30;
+        chancePerder -= 35;
     } else if (mode === 'ganhoCerto') {
         chancePerder = 0;
     }
@@ -96,8 +96,8 @@ function spin(roleta) {
     } else {
         let ganhouBerries = Math.random() < 0.5;
         
-        if (roleta === 'high' && mode === 'apostador') {
-            ganhouBerries = Math.random() < 0.5;
+        if ((mode === 'ganhoCerto') || mode === 'apostador') {
+            ganhouBerries = Math.random() < 0.65;
         }
         
         if (ganhouBerries) {
