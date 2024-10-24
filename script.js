@@ -75,7 +75,7 @@ function spin(roleta) {
     }
 
     if (mode === 'apostador') {
-        chancePerder -= 35;
+        chancePerder -= 30;
     } else if (mode === 'ganhoCerto') {
         chancePerder = 0;
     }
