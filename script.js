@@ -43,11 +43,11 @@ function spin(roleta) {
         resultElement = document.getElementById("resultEspecial");
         mode = document.getElementById("especialMode").value;
 
-        if (betValue === 9080000 && !valorEspecialUsado) {
-            valorEspecialUsado = true;
-            resultElement.innerHTML = `Você ganhou: ${customPrize}`;
-            return;
-        }
+        //if (betValue === 9080000 && !valorEspecialUsado) {
+            //valorEspecialUsado = true;
+            //resultElement.innerHTML = `Você ganhou: ${customPrize}`;
+            //return;
+        //}
 
         // Cálculo da chance de perder com base no valor apostado
         if (betValue <= 100000000) {
